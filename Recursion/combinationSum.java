@@ -1,11 +1,11 @@
 import java.util.*;
-public class combinationSum {
+public class CombinationSum {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>>ans=new ArrayList<>();
         getAllcombinations(candidates,0,new ArrayList<>(),ans,target);
         return ans;
     }
-     public void getAllcombinations(int[]candidates,int idx,List<Integer>combin,List<List<Integer>>ans,int target){
+    public void getAllcombinations(int[]candidates,int idx,List<Integer>combin,List<List<Integer>>ans,int target){
         int n=candidates.length;
         if(idx>=n||target<0){
             return;
@@ -22,11 +22,11 @@ public class combinationSum {
         getAllcombinations(candidates,idx+1,combin,ans,target);
     }
     public static void main(String[] args){
-        combinationSum s=new combinationSum();
+        CombinationSum s=new CombinationSum();
         int[]candidates={2,3,4,5};
         int target=8;
         List<List<Integer>>ans=s.combinationSum(candidates,target);
-        System.out.println(ans);
+        System.out.println(ans) ;
     }
 }
 

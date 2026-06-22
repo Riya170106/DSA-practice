@@ -1,6 +1,6 @@
 import java.util.*;
-public class subsets{
-    public List<List<Integer>>subsets(int[] nums) {
+public class Subsets{
+    public List<List<Integer>>Subsets(int[] nums) {
         List<List<Integer>>ans=new ArrayList<>();
         findsubsets(nums,ans,0,new ArrayList<>());
         return ans;
@@ -14,9 +14,9 @@ public class subsets{
         }
     }
     public static void main(String [] args){
-        subsets s=new subsets();
+        Subsets s=new Subsets();
         int [] nums={1,2,3};
-        List<List<Integer>> ans=s.subsets(nums);
+        List<List<Integer>> ans=s.Subsets(nums);
         System.out.println(ans);
     }
 }
